@@ -1,0 +1,93 @@
+@import './variables';
+
+.history-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+// 🔹 탭 메뉴 스타일
+.history-tabs {
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style-type: none;
+    margin-bottom: 20px;
+
+    li {
+      cursor: pointer;
+      font-size: 18px;
+      padding: 10px;
+      color: $text-color;
+      transition: 0.3s;
+
+      &:hover {
+        color: $hover-text-color;
+      }
+
+      &.active {
+        font-weight: bold;
+        color: $highlight-color;
+        border-bottom: 2px solid $highlight-color;
+      }
+    }
+  }
+}
+
+// 🔹 기록 리스트
+.history-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+
+  .history-item {
+    font-size: 16px;
+    color: $text-color;
+    width: 90%;
+    line-height: 1.5;
+    text-align: left;
+  }
+}
+
+// 🔹 포스터 갤러리 (더보기 버튼 클릭 시 보임)
+.history-gallery {
+  display: flex;
+  flex-wrap: wrap;  // 🔹 겹치지 않게 정렬
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+
+  .history-img {
+    width: 200px;  // 🔹 고정 너비 설정
+    height: 280px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+// 🔹 더보기 버튼
+.load-more {
+  margin-top: 20px;
+  padding: 10px 15px;
+  border: none;
+  background: $blue-color;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background: darken($blue-color, 20%);
+  }
+}

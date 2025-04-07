@@ -1,0 +1,44 @@
+.exhibitions-poto {
+  display: flex;
+
+  .exhibition-list {
+    flex: 0 0 30%;
+    color: $text-color;
+    padding: 2rem;
+    overflow-y: auto;
+
+    .exhibition-item {
+      padding: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+
+      &.selected,
+      &:hover {
+        color: $text-color;
+      }
+    }
+  }
+
+  .exhibition-photos {
+    flex: 70%;
+    color: $footer-text-color;
+    padding: 2rem;
+    overflow-y: auto;
+
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-gap: 1rem;
+
+      .photo-item {
+        img {
+          width: 200px;
+          height: auto;
+          object-fit: cover;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba($black-color, 0.1);
+        }
+      }
+    }
+  }
+}
